@@ -1,0 +1,5 @@
+- name: put values
+  template: src=values.yml dest=/tmp/kibana-{{ kibana_helm_release }}.yml
+
+- name: upgrade {{ kibana_helm_release }} release using a Helm chart
+  shell: export KUBECONFIG=/etc/kubernetes/admin.conf && helm upgrade {{ kibana_helm_release }} stable/kibana --install --recreate-pods --namespace {{ k8s_namespace }} -f /tmp/kibana-{{ kibana_helm_release }}.yml
