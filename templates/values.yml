@@ -3,4 +3,4 @@ env:
 
 service:
   type: NodePort
-  nodePort: 31798
+  nodePort: {{ k8s_kibana_nodeport }}
