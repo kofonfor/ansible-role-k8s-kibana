@@ -1,5 +1,4 @@
-env:
-  ELASTICSEARCH_URL: http://{{ elasticsearch_helm_release }}-elasticsearch-client:9200
+elasticsearchHosts: http://{{ elasticsearch_helm_release }}-elasticsearch-client:9200
 
 service:
   type: NodePort
