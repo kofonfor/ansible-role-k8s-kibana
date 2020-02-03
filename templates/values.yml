@@ -1,4 +1,5 @@
 elasticsearchHosts: http://{{ elasticsearch_helm_release }}-elasticsearch-client:9200
+image: docker.elastic.co/kibana/kibana-oss
 
 service:
   type: NodePort
