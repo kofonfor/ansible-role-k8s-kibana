@@ -1,1 +1,2 @@
 k8s_kibana_nodeport: 31798
+k8s_kibana_imagetag: "7.5.2"
